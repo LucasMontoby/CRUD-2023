@@ -19,3 +19,5 @@ app.use("/", indexRouter);
 const moviesRoutes = require('./routes/moviesRoutes')
 app.use(moviesRoutes)
 
+const rutaApiMovies = require("./routes/api/movies")
+app.use("/api/moviesApi", rutaApiMovies)
