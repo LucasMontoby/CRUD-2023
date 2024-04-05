@@ -21,14 +21,24 @@
 
     </p>
     <br>
-    <ul>
-        <% for( let i = 0; i < movies.length; i++ ) { %>
-        <li>
-            <a href="/movies/detail/<%= movies[i].id %>"><%= movies[i].title %></a>
-        </li>
-        <% } %>
 
+    <ul>
+        <% movies.map(function(movie) { %>
+            <li>
+                <a href="/movies/detail/<%= movie.id %>"><%= movie.title %></a>
+            </li>
+        <% }) %>
     </ul>
+    
+
+    <!-- <ul>
+        <% for (let i = 0; i < movies.length; i++) { %>
+            <li>
+                <a href="/movies/detail/<%= movies[i].id %>"><%= movies[i].title %></a>
+            </li>
+        <% } %>
+    </ul> -->
+    
 </body>
 
 </html>
